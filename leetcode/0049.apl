@@ -1,8 +1,14 @@
 ⍝ From: https://leetcode.com/problems/group-anagrams/
 
-⍝ It's an annoying problem in APL. There's probably a better way
+⍝ Original. Really bad
 groupAnagrams ← {                                      
      strs ← ⍵                            
      table ← ⊃∘⌽¨↓{⍺⍵}⌸({⍵∊⍨⎕C⎕A}¨strs)
      {strs[⍵]}¨table                   
 }
+
+⍝ Version 2. Faster, and relatively clean
+groupAnagrams←{⍵∘{⍺[⍵]}¨⊂⍤⊢⌸∊⍨∘⎕C∘⎕A¨⍵}
+
+⍝ Version 3. Shortest, slower than version 2 by a small amount. I wish sane indexing was in Dyalog Classic...
+groupAnagrams ← {⊂⍤⌷∘⍵⍤⊂⍤⊢⌸∊⍨∘⎕C∘⎕A¨⍵}
