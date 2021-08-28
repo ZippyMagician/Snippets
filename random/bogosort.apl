@@ -1,5 +1,5 @@
 ⍝ O(n!) sorting ftw
-bogosort ← {⍵[?⍨≢⍵]}⍣(∧/2≤/⊢)
+bogosort ← {⍵[?⍨≢⍵]}⍣(∧/2≤/⊣)
 
 ⍝ Shuffle array
 shuffle ← (⊂⍴?⍴)⌷⊢
