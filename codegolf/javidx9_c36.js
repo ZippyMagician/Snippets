@@ -1,0 +1,2 @@
+// Transposes 8x8 binary matrix. A shorter version reads from argv but is invalid with respect to challenge
+c=prompt().split` `.map(l=>[...(+l+256).toString`2`]);alert(c[0].map((x,i)=>'0b'+c.map(x=>x[i]).join``-0).splice(1))
