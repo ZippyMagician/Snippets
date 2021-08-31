@@ -4,8 +4,8 @@
 ⍝ lmao it's so bad
 ⎕IO←0
 
-layer ← {(1+⍵×2)⍴⍵⌽⍣(~2|⍵)⊢1 0}
-tri ← {(⍵+⍳⍵)⌽[1]↑layer¨⍳⍵}
+layer ← 1 0⍴⍨1+2×⊢
+tri ← layer¨⍤⍳⌽[1]⍥↑⍨⊢+⍳
 clean ← {(' '@(⍸⍵=0))⍵}¨
 
 ⍝ Called like: `clean tri 20`
