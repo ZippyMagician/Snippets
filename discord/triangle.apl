@@ -9,3 +9,7 @@ tri ← layer¨⍤⍳⌽[1]⍥↑⍨⊢+⍳
 clean ← {(' '@(⍸⍵=0))⍵}¨
 
 ⍝ Called like: `clean tri 20`
+
+triangle ← {(⍵+⍳⍵)⌽[1]↑(⍺⍴⍨1+2×⊢)¨⍳⍵}
+
+⍝ Called like: `1 0 triangle 20`
