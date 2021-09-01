@@ -5,11 +5,11 @@
 ⎕IO←0
 
 layer ← 1 0⍴⍨1+2×⊢
-tri ← layer¨⍤⍳⌽[1]⍥↑⍨⊢+⍳
+tri ← layer¨⍤⍳⌽⍥↑⍨⊢+⍳
 clean ← {(' '@(⍸⍵=0))⍵}¨
 
 ⍝ Called like: `clean tri 20`
 
-triangle ← {(⍵+⍳⍵)⌽[1]↑(⍺⍴⍨1+2×⊢)¨⍳⍵}
+triangle ← {(⍵+⍳⍵)⌽↑(⍺⍴⍨1+2×⊢)¨⍳⍵}
 
 ⍝ Called like: `1 0 triangle 20`
